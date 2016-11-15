@@ -1,0 +1,4 @@
+
+export GOPATH=/home/liuweihua/workspace/mailhttp
+go install mailhttp
+
