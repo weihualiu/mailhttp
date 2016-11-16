@@ -27,5 +27,8 @@ type Net struct {
 	Timeout int64
 	//服务端地址串 localhost:9827
 	Addr string
-	
+	// 交互通道
+	PutCmd chan string
+	GetCmd chan string
+	CloseCmd chan int
 }

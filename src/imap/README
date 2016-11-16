@@ -1,0 +1,263 @@
+[liuweihua@GSB067 ~]$ telnet 182.119.175.196 143
+Trying 182.119.175.196...
+Connected to 182.119.175.196.
+Escape character is '^]'.
+* OK Coremail System IMap Server Ready(bankcomm[3229208ecf3ba88fcc57c1a9408bd5c7])
+a001 login gao_sb password
+a001 OK LOGIN completed
+a002 list "" *
+* LIST () "/" "INBOX"
+* LIST (\Drafts) "/" "Drafts"
+* LIST (\Sent) "/" "Sent Items"
+* LIST (\Trash) "/" "Trash"
+a002 OK LIST Completed
+a003 select inbox
+* 75 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1] UIDs valid
+* FLAGS (\Answered \Seen \Deleted \Draft \Flagged)
+* OK [PERMANENTFLAGS (\Answered \Seen \Deleted \Draft \Flagged)] Limited
+a003 OK [READ-WRITE] SELECT completed
+a004 fetch 1 body[header]
+* 1 FETCH (BODY[HEADER] {903}
+Received: by ajax-webmail-mailsvr (Coremail) ; Tue, 14 Jun 2016 14:05:57
+ +0800 (CST)
+Date: Tue, 14 Jun 2016 14:05:57 +0800 (CST)
+From: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+To: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+Message-ID: <1d44d0d.1c.1554d8432ef.Coremail.gao_sb@bankcomm.com>
+Subject: =?GBK?B?suLK1NPKvP4tuN8=?=
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_77_20771882.1465884357358"
+X-Originating-IP: [182.207.178.52]
+X-Priority: 3
+X-Mailer: Coremail Webmail Server Version XT2.1.11 dev build
+ 20150107(58648.7033.6860) Copyright (c) 2002-2016 www.mailtech.cn bankcomm
+X-SendMailWithSms: false
+X-CM-TRANSID:xK93tpBbr_TFnl9X6NQDAA--.23W
+X-CM-SenderInfo: 5jdrs2ne6et05nfrzzoofrz/1tbiAgClMFOqem87QQADsC
+X-Coremail-Antispam: 1Ur529EdanIXcx71UUUUU7IcSsGvfJ3GIAIbVAYFVCjjxCrMI
+	AIbVAFxVCF77xC64kEw24lV2xY67C26IkvcIIF6IxKo4kEV4DvcSsGvfC2KfnxnUU==
+
+)
+a004 OK Fetch completed
+a005 fetch 1 body[text]
+* 1 FETCH (BODY[TEXT] {595975}
+------=_Part_77_20771882.1465884357358
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_78_8294111.1465884357358"
+
+------=_Part_78_8294111.1465884357358
+Content-Type: text/plain; charset=GBK
+Content-Transfer-Encoding: base64
+
+xOO6w6O6CtXiysfSu7fisuLK1NPKvP6howoKCiAgICC438uzsqjQtLXE19YKCi0tCr27zajS+NDQ
+0dC3otbQ0MSjqLGxvqmjqb+qt6LI/bK/CrXY1rejurGxvqnK0M73s8fH+M73s6Swsr3WsfsxN7rF
+ODEwytIK08qx4KO6MTAwMDMxCrXnu7CjujAxMC02NjIyOTYwNy8xMzgxMTQ2Njk0Mg==
+------=_Part_78_8294111.1465884357358
+Content-Type: text/html; charset=GBK
+Content-Transfer-Encoding: base64
+
+xOO6w6O6PGRpdj48c3BhbiBjbGFzcz0iQXBwbGUtdGFiLXNwYW4iIHN0eWxlPSJ3aGl0ZS1zcGFj
+ZTpwcmUiPgk8L3NwYW4+1eLKx9K7t+Ky4srU08q8/qGjPC9kaXY+PGRpdj48c3BhbiBjbGFzcz0i
+QXBwbGUtdGFiLXNwYW4iIHN0eWxlPSJ3aGl0ZS1zcGFjZTpwcmUiPgk8aW1nIHNyYz0iY2lkOjE0
+ZjM4ZmYkMSQxNTU0ZDg0MzJlYiRDb3JlbWFpbCRnYW9fc2IkYmFua2NvbW0uY29tIj48L3NwYW4+
+PC9kaXY+PGRpdj48c3BhbiBjbGFzcz0iQXBwbGUtdGFiLXNwYW4iIHN0eWxlPSJ3aGl0ZS1zcGFj
+ZTpwcmUiPjxicj48L3NwYW4+PC9kaXY+PGRpdj48c3BhbiBjbGFzcz0iQXBwbGUtdGFiLXNwYW4i
+IHN0eWxlPSJ3aGl0ZS1zcGFjZTpwcmUiPiA8L3NwYW4+Jm5ic3A7ICZuYnNwOyZuYnNwOzxzcGFu
+IGNsYXNzPSJBcHBsZS10YWItc3BhbiIgc3R5bGU9IndoaXRlLXNwYWNlOnByZSI+CTwvc3Bhbj64
+38uzsqjQtLXE19Y8L2Rpdj48ZGl2PjxzcGFuIGNsYXNzPSJBcHBsZS10YWItc3BhbiIgc3R5bGU9
+IndoaXRlLXNwYWNlOnByZSI+CTwvc3Bhbj48L2Rpdj48YnI+PHNwYW4+LS08YnI+vbvNqNL40NDR
+0Lei1tDQxKOosbG+qaOpv6q3osj9sr88YnI+tdjWt6O6sbG+qcrQzvezx8f4zvezpLCyvdax+zE3
+usU4MTDK0jxicj7TyrHgo7oxMDAwMzE8YnI+tee7sKO6MDEwLTY2MjI5NjA3LzEzODExNDY2OTQy
+PC9zcGFuPg==
+------=_Part_78_8294111.1465884357358--
+
+------=_Part_77_20771882.1465884357358
+Content-Type: image/png;
+ name="=?GBK?Q?SJ-20160406-315-0008-=B8=BD=BC=FE001_(1).png?="
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ filename="=?GBK?Q?SJ-20160406-315-0008-=B8=BD=BC=FE001_(1).png?="
+Content-ID: <14f38ff$1$1554d8432eb$Coremail$gao_sb$bankcomm.com>
+
+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
+------=_Part_77_20771882.1465884357358--
+)
+a005 OK Fetch completed
+a006 logoutt   
+a006 BAD command not support
+a007 fetch 1 body[header]
+* 1 FETCH (BODY[HEADER] {903}
+Received: by ajax-webmail-mailsvr (Coremail) ; Tue, 14 Jun 2016 14:05:57
+ +0800 (CST)
+Date: Tue, 14 Jun 2016 14:05:57 +0800 (CST)
+From: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+To: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+Message-ID: <1d44d0d.1c.1554d8432ef.Coremail.gao_sb@bankcomm.com>
+Subject: =?GBK?B?suLK1NPKvP4tuN8=?=
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_77_20771882.1465884357358"
+X-Originating-IP: [182.207.178.52]
+X-Priority: 3
+X-Mailer: Coremail Webmail Server Version XT2.1.11 dev build
+ 20150107(58648.7033.6860) Copyright (c) 2002-2016 www.mailtech.cn bankcomm
+X-SendMailWithSms: false
+X-CM-TRANSID:xK93tpBbr_TFnl9X6NQDAA--.23W
+X-CM-SenderInfo: 5jdrs2ne6et05nfrzzoofrz/1tbiAgClMFOqem87QQADsC
+X-Coremail-Antispam: 1Ur529EdanIXcx71UUUUU7IcSsGvfJ3GIAIbVAYFVCjjxCrMI
+	AIbVAFxVCF77xC64kEw24lV2xY67C26IkvcIIF6IxKo4kEV4DvcSsGvfC2KfnxnUU==
+
+)
+a007 OK Fetch completed
+a008 fetch aaa
+a008 BAD Parse command error
+a009 fetch bbb
+a009 BAD Parse command error
+a0010 fetch bbb
+a0010 BAD Parse command error
+a0011 fetch 1 body [header]
+* 1 FETCH (BODY ((("text" "plain" ("charset" "GBK") NIL NIL "base64" 226 3)("text" "html" ("charset" "GBK") NIL NIL "base64" 950 13) "alternative")("image" "png" ("name" "=?GBK?Q?SJ-20160406-315-0008-=B8=BD=BC=FE001_(1).png?=") "<14f38ff$1$1554d8432eb$Coremail$gao_sb$bankcomm.com>" NIL "base64" 594024) "related"))
+a0011 OK Fetch completed
+a0012 list "" *
+* LIST () "/" "INBOX"
+* LIST (\Drafts) "/" "Drafts"
+* LIST (\Sent) "/" "Sent Items"
+* LIST (\Trash) "/" "Trash"
+a0012 OK LIST Completed
+a0013 select Trash
+* 0 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 4] UIDs valid
+* FLAGS (\Answered \Seen \Deleted \Draft \Flagged)
+* OK [PERMANENTFLAGS (\Answered \Seen \Deleted \Draft \Flagged)] Limited
+a0013 OK [READ-WRITE] SELECT completed
+a0014 noop
+a0014 OK NOOP completed
+a0015 select 1 body[text]
+a0015 BAD Request not ending with  
+a0016 fetch 1 body[text]
+a0016 OK Fetch completed
+a0017 select inbox
+* 75 EXISTS
+* 0 RECENT
+* OK [UIDVALIDITY 1] UIDs valid
+* FLAGS (\Answered \Seen \Deleted \Draft \Flagged)
+* OK [PERMANENTFLAGS (\Answered \Seen \Deleted \Draft \Flagged)] Limited
+a0017 OK [READ-WRITE] SELECT completed
+a0018 fetch 1 body[header]
+* 1 FETCH (BODY[HEADER] {903}
+Received: by ajax-webmail-mailsvr (Coremail) ; Tue, 14 Jun 2016 14:05:57
+ +0800 (CST)
+Date: Tue, 14 Jun 2016 14:05:57 +0800 (CST)
+From: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+To: =?GBK?B?uN/Ls7Ko?= <gao_sb@bankcomm.com>
+Message-ID: <1d44d0d.1c.1554d8432ef.Coremail.gao_sb@bankcomm.com>
+Subject: =?GBK?B?suLK1NPKvP4tuN8=?=
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_77_20771882.1465884357358"
+X-Originating-IP: [182.207.178.52]
+X-Priority: 3
+X-Mailer: Coremail Webmail Server Version XT2.1.11 dev build
+ 20150107(58648.7033.6860) Copyright (c) 2002-2016 www.mailtech.cn bankcomm
+X-SendMailWithSms: false
+X-CM-TRANSID:xK93tpBbr_TFnl9X6NQDAA--.23W
+X-CM-SenderInfo: 5jdrs2ne6et05nfrzzoofrz/1tbiAgClMFOqem87QQADsC
+X-Coremail-Antispam: 1Ur529EdanIXcx71UUUUU7IcSsGvfJ3GIAIbVAYFVCjjxCrMI
+	AIbVAFxVCF77xC64kEw24lV2xY67C26IkvcIIF6IxKo4kEV4DvcSsGvfC2KfnxnUU==
+
+)
+a0018 OK Fetch completed
+a0019 logout
+* BYE IMAP4rev1 Server logging out
+a0019 OK LOGOUT completed
+Connection closed by foreign host.
+[liuweihua@GSB067 ~]$

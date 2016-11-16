@@ -5,6 +5,7 @@ import "testing"
 
 import "kernel"
 import "fmt"
+import "time"
 
 func TestConnect(t *testing.T) {
 	worker := new(kernel.Worker)
@@ -23,3 +24,15 @@ func TestConnect(t *testing.T) {
 	}
 }
 
+func TestInstance(t *testing.T) {
+	imapc := NewImapNet(false, 600, "182.119.175.196:143")
+	err := imapc.Instance()
+	time.Sleep(time.Second)
+	imapc.CloseCmd <- 0 // goroutine close
+	fmt.Println("imap goroutine exit!")
+	time.Sleep(time.Second * 2)
+	if err != nil {
+		t.Errorf(`TestInstance() is failed!`, err)
+	}
+	
+}
