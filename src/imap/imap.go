@@ -14,7 +14,10 @@ type ImapNet struct {
 	kernel.Net
 	// authenticate true false
 	AuthFlag bool
-	
+	oldCmd *Command
+	currCmd *Command
+	// 操作命令序号
+	seqCmd int
 }
 
 func NewImapNet(ssl bool, timeout int64, addr string) *ImapNet {
@@ -22,9 +25,10 @@ func NewImapNet(ssl bool, timeout int64, addr string) *ImapNet {
 	imapNet.Ssl = ssl
 	imapNet.Timeout = timeout
 	imapNet.Addr = addr
-	imapNet.PutCmd = make(chan string)
-	imapNet.GetCmd = make(chan string)
-	imapNet.CloseCmd = make(chan int)
+	imapNet.PutCh = make(chan string)
+	imapNet.GetCh = make(chan string)
+	imapNet.CloseCh = make(chan int)
+	imapNet.AuthFlag = false
 	return imapNet
 }
 
@@ -51,10 +55,10 @@ func (this *ImapNet) ReConnect() (error) {
 
 func (this *ImapNet) Closed() error {
 	// close all channel
-	close(this.PutCmd)
-	close(this.GetCmd)
-	this.CloseCmd <- 0
-	close(this.CloseCmd)
+	close(this.PutCh)
+	close(this.GetCh)
+	this.CloseCh <- 0
+	close(this.CloseCh)
 	
 	this.Sock.Close()
 	return nil
@@ -79,19 +83,19 @@ func (this *ImapNet) Build() {
 }
 
 func (this *ImapNet) Process(message string) string {
-	this.PutCmd <- message
-	return <-this.GetCmd
+	this.PutCh <- message
+	return <-this.GetCh
 }
 
 func (this *ImapNet) Instance() error {
 	go func(in *ImapNet) {
 		for{
 			select {
-				case <-in.PutCmd: // manage layer to net
+				case <-in.PutCh: // manage layer to net
 					// email data
 					tmp := "0"
-					in.GetCmd<- tmp
-				case <-in.CloseCmd: // close goroutine
+					in.GetCh <- tmp
+				case <-in.CloseCh: // close goroutine
 					// goroutine exit
 					runtime.Goexit()
 				default:
@@ -104,6 +108,6 @@ func (this *ImapNet) Instance() error {
 	return nil
 }
 
-type Command struct {
-	
+type Parse struct {
 }
+

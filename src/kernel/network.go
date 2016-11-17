@@ -28,7 +28,7 @@ type Net struct {
 	//服务端地址串 localhost:9827
 	Addr string
 	// 交互通道
-	PutCmd chan string
-	GetCmd chan string
-	CloseCmd chan int
+	PutCh chan string
+	GetCh chan string
+	CloseCh chan int
 }

@@ -28,9 +28,9 @@ func TestInstance(t *testing.T) {
 	imapc := NewImapNet(false, 600, "182.119.175.196:143")
 	err := imapc.Instance()
 	time.Sleep(time.Second)
-	imapc.CloseCmd <- 0 // goroutine close
+	imapc.CloseCh <- 0 // goroutine close
 	fmt.Println("imap goroutine exit!")
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second)
 	if err != nil {
 		t.Errorf(`TestInstance() is failed!`, err)
 	}
